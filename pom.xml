@@ -144,6 +144,12 @@
 		    <groupId>com.facebook.swift</groupId>
 		    <artifactId>swift-service</artifactId>
 		    <version>0.21.1</version>
+		    <exclusions>
+		    	<exclusion>
+	        		<groupId>org.apache.bval</groupId>
+	    			<artifactId>bval-jsr303</artifactId>
+		    	</exclusion>
+		    </exclusions>
 		</dependency>
 		
 		<dependency>
@@ -157,7 +163,39 @@
 		    <artifactId>swift-codec</artifactId>
 		    <version>0.21.1</version>
 		</dependency>
-		
+		<dependency>  
+    <groupId>org.hibernate</groupId>  
+    <artifactId>hibernate-validator</artifactId>  
+    <version>5.2.4.Final</version>  
+</dependency>  
+<dependency>
+    <groupId>commons-collections</groupId>
+    <artifactId>commons-collections</artifactId>
+    <version>3.2.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-collections4</artifactId>
+    <version>4.1</version>
+</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>19.0</version>
+</dependency>
+		        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.4</version>
+</dependency>
+		 <!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20160810</version>
+</dependency>
 		        
 	</dependencies>
     <build>
