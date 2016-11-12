@@ -2,6 +2,7 @@ package com.qihoo.study;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.List;
 import java.util.UUID;
 
 import com.google.common.base.Joiner;
@@ -27,6 +28,17 @@ public class Test {
 		System.out.println(d);
 	}
 	
+	public void testMethod(Address address, @Param("students")List<Student> studentList, Teacher teacher){
+		System.out.println(studentList.get(0).getId());
+	}
+	
+	public void testInt(int id){
+		System.out.println(id);
+	}
+	
+	public void testString(@Param("key")String key){
+		System.out.println(key);
+	}
 	
 	
 }

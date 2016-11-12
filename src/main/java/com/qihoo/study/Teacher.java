@@ -1,11 +1,19 @@
 package com.qihoo.study;
 
 import java.util.List;
-
 public class Teacher {
-	private String id;
-	private String name;
+//	private String id;
+//	private String name;
+	private Address address;
 	private List<Student> students;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	public List<Student> getStudents() {
 		return students;
@@ -15,22 +23,22 @@ public class Teacher {
 		this.students = students;
 	}
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
+//	public String getId() {
+//		return id;
+//	}
+//
+//	public void setId(String id) {
+//		this.id = id;
+//	}
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
 	
 	
 }
