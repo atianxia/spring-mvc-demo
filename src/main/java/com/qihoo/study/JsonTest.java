@@ -26,7 +26,7 @@ public class JsonTest {
 	static String jsonString = "{\"name\":\"Mahesh\", \"id\":\"21\",\"address\":{\"address1\":\"address1\", \"address2\":\"address2\"}, \"students\":[{\"id\":\"1\", \"name\":\"student1\"}]}";
 	public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
-	public static void main1(String[] args)
+	public static void main(String[] args)
 			throws JsonParseException, JsonMappingException, IOException, NoSuchMethodException, SecurityException {
 		/*
 		 * Teacher teacher = new Teacher(); teacher.setId("1");
@@ -122,7 +122,7 @@ public class JsonTest {
 
 		method.invoke(new Test(), params);
 	}
-	public static void main(String[] args) throws JsonProcessingException {
+	public static void main1(String[] args) throws JsonProcessingException {
 		
 		ObjectMapper objectMapper = new ObjectMapper();
 			objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);

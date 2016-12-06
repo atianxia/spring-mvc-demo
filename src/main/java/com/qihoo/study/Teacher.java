@@ -4,8 +4,18 @@ import java.util.List;
 public class Teacher {
 //	private String id;
 //	private String name;
+	private int i;
 	private Address address;
 	private List<Student> students;
+
+	
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
 
 	public Address getAddress() {
 		return address;

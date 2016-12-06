@@ -59,7 +59,7 @@ public class HomeController {
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
 	public String get(Locale locale, Model model) throws TException {
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();  
-		System.out.println("*********get attribute************" + request.getSession().getAttribute("test") + " sessionId****" + request.getSession().getId());
+//		System.out.println("*********get attribute************" + request.getSession().getAttribute("test") + " sessionId****" + request.getSession().getId());
 		return "home";
 	}
 	
