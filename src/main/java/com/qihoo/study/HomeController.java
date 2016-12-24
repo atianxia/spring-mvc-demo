@@ -5,7 +5,9 @@ import java.util.Date;
 import java.util.Locale;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.thrift.TException;
 import org.slf4j.Logger;
@@ -37,8 +39,16 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws TException {
-		
-		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();  
+		ServletRequestAttributes attributes = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes());
+		HttpServletRequest request = attributes.getRequest();
+		Cookie[] cookies =  request.getCookies();
+		for (Cookie cookie : cookies) {
+			System.out.println(cookie.getName());
+			System.out.println(cookie.getValue());
+		}
+		HttpServletResponse response = attributes.getResponse();
+		System.out.println("++++++++++++++++++++++++===");
+//		response.addCookie(new Cookie("userId", "123"));
 		request.getSession().setAttribute("test", "test1");
 		System.out.println("*********set attribute************sessionId****" + request.getSession().getId());
 //		logger.info("Welcome home! The client locale is {}.", locale);

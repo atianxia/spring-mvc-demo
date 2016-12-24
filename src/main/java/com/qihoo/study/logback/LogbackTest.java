@@ -1,3 +1,4 @@
+/*
 package com.qihoo.study.logback;
 
 import org.slf4j.Logger;
@@ -7,9 +8,11 @@ import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.core.util.StatusPrinter;
 
+*/
 /**
  * Created by luoyong on 16-10-24.
- */
+ *//*
+
 public class LogbackTest {
 
 	public static void main(String[] args) {
@@ -48,3 +51,4 @@ public class LogbackTest {
 	    
 	}
 }
+*/
