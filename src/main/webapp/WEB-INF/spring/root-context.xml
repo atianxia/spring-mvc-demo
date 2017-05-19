@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:util="http://www.springframework.org/schema/util"
+	   xmlns:jdbc="http://www.springframework.org/schema/jdbc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/mvc/spring-jdbc-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<import resource="classpath:spring/spring-thrift-client.xml"/>
@@ -11,4 +13,10 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 	<bean id = "test" class="com.qihoo.study.TestJson">
 		<property name="jobService" value="#{siteJson.dbserver}"/>
 	</bean>
+
+	<jdbc:initialize-database data-source="dataSource" separator="@@">
+		<jdbc:script location="classpath:com/foo/sql/db-schema.sql" separator=";"/>
+		<jdbc:script location="classpath:com/foo/sql/db-test-data-1.sql"/>
+		<jdbc:script location="classpath:com/foo/sql/db-test-data-2.sql"/>
+	</jdbc:initialize-database>
 </beans>

@@ -18,9 +18,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+      <script type="application/javascript" src="<%=basePath%>/resources/js/jquery-1.8.0.min.js"></script>
+      <script type="application/javascript">
+          $.ajax({
+              url : "http://172.24.62.89:8080/checkChromeForUpdate",
+              dataType : "jsonp",
+              jsonpCallback : 'jcb',
+              success : function(data) {
+                  console.log(data.fileName);
+              },
+              error : function(e) {
+                  return false;
+              }
+          });
+          function jcbFun(data) {
+          }
+      </script>
   </head>
   
   <body>
     This is my JSP page. <br>
   </body>
+
 </html>
